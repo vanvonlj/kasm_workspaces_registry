@@ -2,7 +2,6 @@
   "description": "GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. It is extensible by means of plugins, and scriptable.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "gimp.png",
-  "name": "lscr.io/linuxserver/gimp:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 1310
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/gimp:latest",
+      "uncompressed_size_mb": 1310
+    }
+  ]
 }

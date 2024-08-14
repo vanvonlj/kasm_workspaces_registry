@@ -2,7 +2,6 @@
   "description": "Ungoogled Chromium is Google Chromium, sans dependency on Google web services.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "ungoogled-chromium.png",
-  "name": "lscr.io/linuxserver/ungoogled-chromium:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -28,10 +27,10 @@
     "amd64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 2930
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/ungoogled-chromium:latest",
+      "uncompressed_size_mb": 2930
+    }
+  ]
 }

@@ -2,7 +2,6 @@
   "description": "Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "pidgin.png",
-  "name": "lscr.io/linuxserver/pidgin:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 1310
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/pidgin:latest",
+      "uncompressed_size_mb": 1310
+    }
+  ]
 }

@@ -2,7 +2,6 @@
   "description": "LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "libreoffice.png",
-  "name": "lscr.io/linuxserver/libreoffice:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 1510
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/libreoffice:latest",
+      "uncompressed_size_mb": 1510
+    }
+  ]
 }

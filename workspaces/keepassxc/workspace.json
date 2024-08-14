@@ -2,7 +2,6 @@
   "description": "KeePassXC is a free and open-source password manager.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "keepassxc.png",
-  "name": "lscr.io/linuxserver/keepassxc:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 1430
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/keepassxc:latest",
+      "uncompressed_size_mb": 1430
+    }
+  ]
 }

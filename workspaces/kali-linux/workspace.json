@@ -2,7 +2,6 @@
   "description": "Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "kali.png",
-  "name": "lscr.io/linuxserver/kali-linux:latest",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 9630
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/kali-linux:latest",
+      "uncompressed_size_mb": 9630
+    }
+  ]
 }

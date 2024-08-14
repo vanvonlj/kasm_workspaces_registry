@@ -2,7 +2,6 @@
   "description": "VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "vscodium.png",
-  "name": "lscr.io/linuxserver/vscodium:latest",
   "run_config": {
     "entrypoint": [
       "/kasminit"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 2020
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/vscodium:latest",
+      "uncompressed_size_mb": 2020
+    }
+  ]
 }

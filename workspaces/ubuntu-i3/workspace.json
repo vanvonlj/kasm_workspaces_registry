@@ -2,7 +2,6 @@
   "description": "Ubuntu with the i3 desktop environment.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "ubuntu-i3.png",
-  "name": "lscr.io/linuxserver/webtop:ubuntu-i3",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
@@ -22,10 +21,10 @@
     "arm64"
   ],
   "compatibility": [
-    "1.13.x",
-    "1.14.x",
-    "1.15.x",
-    "1.16.x"
-  ],
-  "uncompressed_size_mb": 1630
+    {
+      "version": "1.16.x",
+      "image": "lscr.io/linuxserver/webtop:ubuntu-i3",
+      "uncompressed_size_mb": 1630
+    }
+  ]
 }
