@@ -29,6 +29,8 @@ glob("**/workspace.json", async function (err, files) {
 		encoding: "hex",
 	};
 
+	let channels = new Set()
+
 	for (const file of files) {
 		//files.forEach(async function(file) {
 
@@ -39,7 +41,14 @@ glob("**/workspace.json", async function (err, files) {
 
 		let parsed = JSON.parse(filedata);
 		parsed.sha = hash.hash;
-		console.log(parsed.name + ' added')
+		console.log(parsed.friendly_name + ' added')
+		parsed.compatibility.forEach((element, index) => {
+			if ('available_tags' in element) {
+				element.available_tags.forEach((el) => {
+					channels.add(el)
+				})
+			}
+		})
 		workspaces.push(parsed);
 
 		if (fs.existsSync(folder + "/" + parsed.image_src)) {
@@ -60,7 +69,13 @@ glob("**/workspace.json", async function (err, files) {
 		contact_url: nextConfig.env.contactUrl || null,
 		modified: Date.now(),
 		workspaces: workspaces,
+		channels: [...channels],
+		default_channel: 'develop'
 	};
+
+	if (channels.size === 0) {
+		json.default_channel = null
+	}
 
 	let data = JSON.stringify(json);
 

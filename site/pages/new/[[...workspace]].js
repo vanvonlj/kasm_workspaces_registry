@@ -10,7 +10,7 @@ import allworkspaces from '../../../public/list.json'
 export async function getStaticPaths() {
   let paths = allworkspaces.workspaces.map(workspace => ({
     params: {
-      workspace: [btoa(workspace.name)]
+      workspace: [btoa(workspace.friendly_name)]
     }
   }))
   paths.push({
