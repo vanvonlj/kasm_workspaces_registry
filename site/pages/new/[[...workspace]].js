@@ -75,7 +75,7 @@ export default function New({ workspace }) {
       setCombined(defaultState)
     }
     else if (workspace && workspace[0]) {
-      const workspaceDetails = allworkspaces.workspaces.find(el => el.name === atob(workspace[0]))
+      const workspaceDetails = allworkspaces.workspaces.find(el => el.friendly_name === atob(workspace[0]))
       delete workspaceDetails['sha']
       description.current.value = workspaceDetails.description
       name.current.value = workspaceDetails.name
