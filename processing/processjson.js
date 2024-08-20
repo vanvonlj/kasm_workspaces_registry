@@ -30,6 +30,7 @@ glob("**/workspace.json", async function (err, files) {
 	};
 
 	let channels = new Set()
+	let versions = new Set()
 
 	for (const file of files) {
 		//files.forEach(async function(file) {
@@ -47,6 +48,9 @@ glob("**/workspace.json", async function (err, files) {
 				element.available_tags.forEach((el) => {
 					channels.add(el)
 				})
+			}
+			if ('version' in element) {
+				versions.add(element.version)
 			}
 		})
 		workspaces.push(parsed);
@@ -80,4 +84,7 @@ glob("**/workspace.json", async function (err, files) {
 	let data = JSON.stringify(json);
 
 	fs.writeFileSync(dir + "/list.json", data);
+	fs.writeFileSync(dir + "/versions.json", {
+		versions: [...versions]
+	});
 });
