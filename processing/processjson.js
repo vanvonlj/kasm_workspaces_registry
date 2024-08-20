@@ -84,7 +84,7 @@ glob("**/workspace.json", async function (err, files) {
 	let data = JSON.stringify(json);
 
 	fs.writeFileSync(dir + "/list.json", data);
-	fs.writeFileSync(dir + "/versions.json", {
+	fs.writeFileSync(dir + "/versions.json", JSON.stringify({
 		versions: [...versions]
-	});
+	}));
 });
