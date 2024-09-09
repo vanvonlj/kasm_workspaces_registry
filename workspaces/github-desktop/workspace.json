@@ -10,7 +10,10 @@
     "user": 1000,
     "cap_add": [
       "IPC_LOCK"
-    ]
+    ],
+    "environment": {
+      "HOME": "/home/kasm-user"
+    }
   },
   "exec_config": {},
   "categories": [
