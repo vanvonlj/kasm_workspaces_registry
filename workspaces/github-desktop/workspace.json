@@ -7,6 +7,9 @@
       "/kasminit"
     ],
     "user": 1000,
+    "environment": {
+      "HOME": "/home/kasm-user"
+    },
     "cap_add": [
       "IPC_LOCK"
     ]

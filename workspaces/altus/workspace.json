@@ -9,7 +9,10 @@
     "entrypoint": [
       "/kasminit"
     ],
-    "user": 1000
+    "user": 1000,
+    "environment": {
+      "HOME": "/home/kasm-user"
+    }
   },
   "exec_config": {},
   "categories": [
