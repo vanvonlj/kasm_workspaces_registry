@@ -2,11 +2,11 @@
 
 const nextConfig = {
   env: {
-    name: 'LinuxServer.io',
-    description: 'Kasm workspaces provided by LSIO expertise',
+    name: 'Kasm Workspaces',
+    description: 'Kasm workspaces provided by vanvonlj',
     icon: 'https://www.linuxserver.io/user/assets/typhoon/Asset%202.svg',
-    listUrl: 'https://kasmregistry.linuxserver.io/',
-    contactUrl: 'https://discord.gg/YWrKVTn',
+    listUrl: 'https://vanvonlj.github.io/kasm_workspaces_registry/',
+    contactUrl: '',
   },
   reactStrictMode: true,
   swcMinify: true,
