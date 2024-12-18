@@ -2,7 +2,7 @@
 
 const nextConfig = {
   env: {
-    name: 'Kasm Workspaces',
+    name: 'Luke's Workspaces',
     description: 'Kasm workspaces provided by vanvonlj',
     icon: 'https://www.linuxserver.io/user/assets/typhoon/Asset%202.svg',
     listUrl: 'https://vanvonlj.github.io/kasm_workspaces_registry/',
